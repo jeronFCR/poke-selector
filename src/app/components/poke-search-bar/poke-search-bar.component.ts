@@ -1,4 +1,4 @@
-import { Component, input, output, signal } from '@angular/core';
+import { Component, ElementRef, ViewChild, input, output, signal } from '@angular/core';
 
 import { PokemonListItem } from '@poke/models/pokemon.model';
 
@@ -11,6 +11,8 @@ import { HighlightTextDirective } from '@poke/directives/highlight-text.directiv
   styleUrl: './poke-search-bar.component.less',
 })
 export class PokeSearchBarComponent {
+  @ViewChild('pokemonListRef') pokemonListRef!: ElementRef<HTMLElement>;
+
   readonly query = input<string>('');
   readonly filteredPokemons = input<PokemonListItem[]>([]);
 
@@ -24,6 +26,7 @@ export class PokeSearchBarComponent {
 
   onInput(event: Event) {
     const target = event.target as HTMLInputElement;
+    this.pokemonListRef?.nativeElement.scrollTo({ top: 0, behavior: 'smooth' });
 
     this.update.emit(target.value);
   }
