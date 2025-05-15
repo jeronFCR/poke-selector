@@ -69,8 +69,18 @@
   align-items: center;
 }
 
+.flex-row {
+  flex-direction: row;
+}
+
 .flex-column {
   flex-direction: column;
+}
+
+.md\:flex-row {
+  @media (width >= 60rem) {
+    flex-direction: row;
+  }
 }
 
 .flex-grow-1 {
