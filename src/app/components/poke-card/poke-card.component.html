@@ -9,8 +9,8 @@
         <img class="w-full" [src]="pokemon()?.sprites?.front_default" alt="{{ pokemon()?.name }}" />
       </div>
       <div class="flex-grow-3">
-        <h2>{{ pokemon()?.name | titlecase }}</h2>
-        <p><strong>Weight:</strong> {{ pokemon()?.weight }}</p>
+        <p class="text-xl">{{ pokemon()?.name | titlecase }}</p>
+        <p class="text-xs"><strong>Weight:</strong> {{ pokemon()?.weight }}</p>
       </div>
     }
   </div>
