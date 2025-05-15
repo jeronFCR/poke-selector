@@ -40,7 +40,7 @@ describe('HighlightTextDirective', () => {
 
     fixture.detectChanges();
 
-    expect(fixture.nativeElement.querySelector('span').innerHTML).toBe('pi<span class="text-color-accent">ka</span>chu');
+    expect(fixture.nativeElement.querySelector('span').innerHTML).toBe('pi<span class="text-color-warning">ka</span>chu');
   });
 
   it('should be case-insensitive', () => {
@@ -49,6 +49,6 @@ describe('HighlightTextDirective', () => {
 
     fixture.detectChanges();
 
-    expect(fixture.nativeElement.querySelector('span').innerHTML).toBe('p<span class="text-color-accent">ik</span>achu');
+    expect(fixture.nativeElement.querySelector('span').innerHTML).toBe('p<span class="text-color-warning">ik</span>achu');
   });
 });
