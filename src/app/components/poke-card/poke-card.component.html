@@ -1,0 +1,17 @@
+<div class="h-50 p-4 font-secondary bg-base-100 shadow-md rounded-lg">
+  <div class="h-full d-flex justify-center align-center text-center">
+    @if (isLoading()) {
+      <p>Loading...</p>
+    } @else if (!pokemon()) {
+      <p>No PokeData available</p>
+    } @else {
+      <div class="flex-grow-2">
+        <img class="w-full" [src]="pokemon()?.sprites?.front_default" alt="{{ pokemon()?.name }}" />
+      </div>
+      <div class="flex-grow-3">
+        <h2>{{ pokemon()?.name | titlecase }}</h2>
+        <p><strong>Weight:</strong> {{ pokemon()?.weight }}</p>
+      </div>
+    }
+  </div>
+</div>

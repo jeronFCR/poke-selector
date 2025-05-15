@@ -1,0 +1,44 @@
+<div class="relative">
+  <label class="absolute text-xs color-text-neutral top-1 left-1" for="pokemon-autocomplete-search">Favorite Pokemon</label>
+  <input
+    id="pokemon-autocomplete-search"
+    data-testid="autocomplete-input"
+    class="w-full pt-8 pb-1 py-0 bg-base-100 text-color-neutral text-xl rounded-top-lg border-color-primary border-0 border-bottom-1 text-indent-1"
+    type="input"
+    maxlength="50"
+    autocomplete="off"
+    role="combobox"
+    aria-controls="pokemon-list"
+    aria-live="polite"
+    [attr.aria-expanded]="showList()"
+    [value]="query()"
+    (input)="onInput($event)"
+    (focus)="onFocus()"
+    (blur)="onBlur()"
+    (keydown)="onTabPress($event)"
+  />
+
+  <div class="icons absolute top-2 right-2">
+    <span class="text-xl text-color-error mr-2 pointer material-symbols-outlined" data-testid="clear-icon" (click)="onClear()">
+      close
+    </span>
+    <span class="text-xl text-color-base material-symbols-outlined">search</span>
+  </div>
+
+  @if (showList()) {
+    <ul
+      id="pokemon-list"
+      role="listbox"
+      class="max-h-100 overflow-y-scroll absolute m-0 p-0 w-full bg-base-100 shadow-md rounded-bottom-lg"
+      (scroll)="onScroll($event)"
+    >
+      @for (pokemon of filteredPokemons(); track pokemon.name) {
+        <li role="option" class="pointer px-2 py-4 hover:text-color-primary hover:bg-primary" (mousedown)="onSelect(pokemon)">
+          <span pokeHighlightText [content]="pokemon.name" [query]="query()">{{ pokemon.name }}</span>
+        </li>
+      } @empty {
+        <li class="px-2 py-4">No PokeData available</li>
+      }
+    </ul>
+  }
+</div>

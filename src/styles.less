@@ -1,0 +1,258 @@
+@import 'src/variables.less';
+
+.m-0 {
+  margin: calc(@unit * 0);
+}
+
+.mt-4 {
+  margin-top: calc(@unit * 4);
+}
+
+.mr-2 {
+  margin-right: calc(@unit * 2);
+}
+
+.p-0 {
+  padding: calc(@unit * 0);
+}
+
+.p-4 {
+  padding: calc(@unit * 4);
+}
+
+.p-12 {
+  padding: calc(@unit * 12);
+}
+
+.pt-8 {
+  padding-top: calc(@unit * 8);
+}
+
+.pb-1 {
+  padding-bottom: calc(@unit * 1);
+}
+
+.px-2 {
+  padding-top: calc(@unit * 2);
+  padding-bottom: calc(@unit * 2);
+}
+
+.px-4 {
+  padding-top: calc(@unit * 4);
+  padding-bottom: calc(@unit * 4);
+}
+
+.py-0 {
+  padding-left: calc(@unit * 0);
+  padding-right: calc(@unit * 0);
+}
+
+.py-3 {
+  padding-left: calc(@unit * 3);
+  padding-right: calc(@unit * 3);
+}
+
+.py-4 {
+  padding-left: calc(@unit * 4);
+  padding-right: calc(@unit * 4);
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+}
+
+.flex-grow-2 {
+  flex-grow: 2;
+}
+
+.flex-grow-3 {
+  flex-grow: 3;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.top-1 {
+  top: 10px;
+}
+
+.top-2 {
+  top: 20px;
+}
+
+.left-1 {
+  left: 10px;
+}
+
+.right-2 {
+  right: 20px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.h-50 {
+  height: calc(@unit * 50);
+}
+
+.max-h-100 {
+  max-height: calc(@unit * 100);
+}
+
+.text-xs {
+  font-size: @text-xs;
+}
+
+.text-xl {
+  font-size: @text-xl;
+}
+
+.text-indent-1 {
+  text-indent: 10px;
+}
+
+.font-primary {
+  font-family: @font-primary;
+}
+
+.font-secondary {
+  font-family: @font-secondary;
+}
+
+.bg-base-100 {
+  background-color: @base-100-color;
+}
+
+.bg-base-300 {
+  background-color: @base-300-color;
+}
+
+.hover\:bg-primary:hover {
+  background-color: @primary-color;
+}
+
+.bg-neutral {
+  background-color: @neutral-color;
+}
+
+.text-color-base {
+  color: @text-color-base;
+}
+
+.text-color-primary {
+  color: @text-color-primary;
+}
+
+.hover\:text-color-primary:hover {
+  color: @text-color-primary;
+}
+
+.text-color-accent {
+  color: @text-color-accent;
+}
+
+.text-color-warning {
+  color: @text-color-warning;
+}
+
+.text-color-error {
+  color: @text-color-error;
+}
+
+.text-color-neutral {
+  color: @text-color-neutral;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.shadow-md {
+  box-shadow: @shadow-md;
+}
+
+.rounded-lg {
+  border-radius: @border-radius-lg;
+}
+
+.rounded-top-lg {
+  border-radius: @border-radius-lg @border-radius-lg 0 0;
+}
+
+.rounded-bottom-lg {
+  border-radius: 0 0 @border-radius-lg @border-radius-lg;
+}
+
+.overflow-y-scroll {
+  overflow-y: scroll;
+}
+
+.border-color-primary {
+  border-color: @primary-color;
+}
+
+.border-0 {
+  border-width: 0;
+}
+
+.border-bottom-1 {
+  border-bottom-width: calc(@unit * 1);
+}
+
+*:focus {
+  outline: none;
+}
+
+li {
+  list-style: none;
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: @text-color-neutral;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: @base-100-color;
+  border-radius: 5px;
+  border: 1px solid @text-color-base;
+}

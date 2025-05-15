@@ -1,0 +1,23 @@
+<nav class="d-flex align-center px-4 py-3 bg-neutral text-color-neutral">
+  <span class="text-xl">PokeSelect</span>
+</nav>
+
+<main class="d-flex flex-column justify-center align-center p-12">
+  <div class="flex-grow-1 w-50">
+    <poke-search-bar
+      [query]="query()"
+      [filteredPokemons]="filteredPokemons()"
+      (update)="onSearch($event)"
+      (clear)="onClear()"
+      (selected)="onSelect($event)"
+      (scrollEnd)="onScrollToEnd()"
+      (tab)="onTab()"
+    />
+  </div>
+
+  @if (selectedPokemon()) {
+    <div class="flex-grow-1 mt-4 w-50">
+      <poke-card [isLoading]="isLoading()" [pokemon]="selectedPokemon()" />
+    </div>
+  }
+</main>

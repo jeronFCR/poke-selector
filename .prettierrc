@@ -1,0 +1,27 @@
+{
+  "trailingComma": "es5",
+  "tabWidth": 2,
+  "semi": true,
+  "singleQuote": true,
+  "printWidth": 140,
+  "bracketSpacing": true,
+  "importOrder": [
+    "^@angular/",
+    "<THIRD_PARTY_MODULES>",
+    "^@poke/(services|models)",
+    "^@poke/(directives|components)",
+    "^@poke/(utils)",
+    "^environments",
+    "^\\."
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true,
+  "importOrderParserPlugins": ["classProperties", "typescript", "decorators-legacy"],
+  "plugins": ["@trivago/prettier-plugin-sort-imports"],
+  "overrides": [
+    {
+      "files": "**/en_US.ts",
+      "options": { "quoteProps": "preserve" }
+    }
+  ]
+}
